@@ -1,7 +1,7 @@
 package utils;
 
 /**
- * Utility class to print a 2D array in a formatted way.
+ * Utility class to print a 2D array in a grid formatted way.
  */
 public class Array2Dprinter {
 
@@ -28,14 +28,14 @@ public class Array2Dprinter {
     }
 
     /**
-     * Prints a 2D array of IPrintableElement objects in a formatted way.
+     * Build a grid string representation of a 2D array.
      *
-     * @param array2D The 2D array to be printed.
+     * @param array2D The 2D array to be printed. first dimension is the row (vertical), second dimension is the column (horizontal).
      * @param highlightRow The row coordinate of the cell to be highlighted
      * @param highlightColumn The column coordinate of the cell to be highlighted
-     * @return A string representation of the 2D array.
+     * @return The grid string representation of the 2D array
      */
-    public static String print2DArray(IPrintableElement[][] array2D, int highlightRow, int highlightColumn) {
+    public static String print2DArray(IPrintable[][] array2D, int highlightRow, int highlightColumn) {
         StringBuilder output = new StringBuilder();
         int maxLength = findMaxLength(array2D); // Find the maximum length of elements for alignment purposes.
         int numColumns = array2D[0].length; // Get the number of columns in the array.
@@ -57,12 +57,12 @@ public class Array2Dprinter {
         output.append(System.lineSeparator());
     }
 
-    private static void appendElements(StringBuilder output, IPrintableElement[] row, int maxLength, boolean isHighlightRow, int highlightColumn) {
+    private static void appendElements(StringBuilder output, IPrintable[] row, int maxLength, boolean isHighlightRow, int highlightColumn) {
 
         output.append("|");
 
         for (int col = 0; col < row.length; col++) {
-            IPrintableElement element = row[col];
+            IPrintable element = row[col];
             String text = (element != null) ? element.getPrintableString() : "";
 
             double padding = (maxLength - text.length()) * 0.5;
@@ -87,10 +87,10 @@ public class Array2Dprinter {
         output.append(System.lineSeparator());
     }
 
-    private static int findMaxLength(IPrintableElement[][] array) {
+    private static int findMaxLength(IPrintable[][] array) {
         int maxLength = 0;
-        for (IPrintableElement[] row : array) {
-            for (IPrintableElement element : row) {
+        for (IPrintable[] row : array) {
+            for (IPrintable element : row) {
                 if (element != null && element.toString().length() > maxLength) {
                     maxLength = element.toString().length();
                 }
