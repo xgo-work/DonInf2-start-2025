@@ -1,62 +1,50 @@
-# DonInf2
-Boiler plate code for the DonInf2 course. You can freely use this code to start your project.
+# DonInf2 Starting Code
+This some boiler plate code for the DonInf2 course project. Use this code as starting point for your project.
 
 ## Setup
-
-First each team member needs a github account.
-
-### 1. Setting up your group's repository on Github
-
-We will use a github specific functionnality to perform that.
-it is called a "fork" which is a fresh new copy of an existing repository.
-
-Only one member per group should do that
-- Open the github page of this repository https://github.com/xgo-work/DonInf2-start-2025/
--
-
-
-One member will create a repository on github
-- Go to your account's page
-- click on the **Repositories** section
-- click the green button **New**
-- Fill the form to create your new repository
-
-Then add your team mates as contributors. To do that, on your repository page
-- Go to Settings
-- Collaborators and team
-- (Manage access) > Add your teammates as contributors
+### 1. Repository On Github
+First you need to get a copy of this repository, the best approach is to fork this repository. a fork is a github specific functionality, it creates your own copy of a repository. You need a github account in order to fork a repository.
+**Only one team member should perform that**
+- Login to your github account
+- At the top right of the github window use the **Fork** button > **Create new fork**
+- Name it <M53-X-groupname> according to your class and group
+- Share the repository with your group members
+    - Go to Settings
+    - Collaborators and team
+    - (Manage access) > Add people
 
 ### 2. Setup your local workspace
-Each team member now has to configure his local workspace.
 
-An easy option is to use Github Desktop application
+Now, each team member can configure his/her local workspace.
+
+#### 2.1 OPTIONAL install git command line
+If you want to learn command line tools as well, you can install the git command line on your machine.
+[instructions here](https://github.com/git-guides/install-git)
+
+#### 2.2 Repository local setup
+
+An easy option is to use the Github Desktop application
 - Download the app and install it
-- Open it and log with your github account
+- Open it and log in with your github account
 - At the top left click **Add** and choose **Clone Repository**
-- Pick your newly created repository and choose a directory to clone it on your machine
+- Pick your newly created repository and choose a directory to clone it on your machine.
 
-In the directory you chose you should now have a new directory named after you repository name.
+In the directory you chose above you should now have a new directory named after you repository name.
 
-### 2.1 Optional install command line tools
-
-Github desktop has an option to install the command line tools in the GithubDesktop top left menu select the "Install Command Line Tool..."
-(I did not test it but it should work :))
-
-## 3. Get the starter kit code
-**Only one team member does that !!!**
-- download the started kit code here https://github.com/xgo-work/DonInf2-start-2025/archive/refs/heads/main.zip
-- open an explorer window in your cloned repository
-- unzip it in created repository
-- add all the new files (in your favorite IDE) or with the command line opened in your git directory `git add .`
-- create a commit `git commit -m "some meaningful message"`
-- push the commit `git push` (this will push changes to your github repository)
-
-## 3.1
-The other team mates can now fetch the first changes but running `git pull` in their repository or using Github Desktop by performing a **fetch**
+Alternatively you can do it on the command line with git directly
+- In your github repository click the **Code** button and select SSH and copy the URL
+- Open a console in the directory you want your repository
+- clone the repository with the command
+```
+git clone <copied-url>
+```
 
 ## Running the project
-Use your favorite IDE to run the project.
 
+### IDE
+Use your favorite IDE to run the project. Open the repository directory in your IDE and run the main which is found in `src/main/Main.java`.
+
+### command line
 Alternatively, you can run the project with the `buildAndRun.sh` script. Open a terminal or console in the repository directory and run the following command
 
 ```
@@ -64,6 +52,12 @@ Alternatively, you can run the project with the `buildAndRun.sh` script. Open a 
 ```
 
 To run the script, you need java installed on your computer.
-
 If running a Windows computer you also need bash shell installed (for example Git For Windows https://gitforwindows.org/).
+
+## Examples
+A few string manipulation examples are found in the `src/exemples` folder and called in the main. Feel free to remove them.
+
+## About this README
+Feel free to edit this README as well, it's yours :)
+The format of this file is [markdown](https://markdownlivepreview.com/)
 
