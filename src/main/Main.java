@@ -9,7 +9,7 @@ import utils.StringStyling;
 import utils.Style;
 
 public class Main {
-Tagrandmere
+
     public static void main(String[] args) {
         // you can safely remove those examples lines
         StringManipulation.Example();
